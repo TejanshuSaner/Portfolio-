@@ -1,0 +1,32 @@
+@import "../../App.css";
+
+.navBar{
+    height: 90px;
+    /* background-color: yellow; */
+
+.wrapper{
+    max-width: 1366px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  
+}
+span{
+    font-weight: bold;
+    margin-left: 18%;
+
+    
+  
+}
+.social{
+    display: flex;
+    gap: 20px;
+    img{
+        width: 18px;
+        height: 18px;
+    }
+}
+}

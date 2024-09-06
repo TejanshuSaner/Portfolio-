@@ -1,0 +1,101 @@
+.skills-main {
+  height: 100vh;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+.title-box {
+  height: 80px;
+  font-size: 44px;
+  padding-top: 40px;
+  text-align: center;
+  /* /* background-color: yellow;  */
+}
+
+span {
+  color: #0ef;
+}
+
+.skill-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.progressing {
+  width: 600px;
+  height: 400px;
+  padding: 55px 50px;
+  margin-left: 20px;
+}
+
+.technical-bars {
+  .heading {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+  }
+
+  .bar {
+    font-size: 25px;
+    margin: 10px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .line {
+      position: relative;
+      border-radius: 10px;
+      width: 100%;
+      height: 5px;
+      background-color: red; /* Base background color of the line */
+      overflow: hidden; /* Ensure inner span doesn't overflow */
+      margin: 10px 0; /* Spacing between bars */
+
+      span {
+        position: absolute;
+        height: 100%;
+        background-color: aqua; /* Color of the animated progress */
+        border-radius: 10px;
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+      }
+
+      .html span {
+        width: 90%; /* Adjust based on progress */
+        animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+      }
+
+      .css span {
+        width: 90%; /* Adjust based on progress */
+        animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+      }
+
+      .javascript span {
+        width: 70%; /* Adjust based on progress */
+        animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+      }
+
+      .react span {
+        width: 60%; /* Adjust based on progress */
+        animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+      }
+
+      .java span {
+        width: 50%; /* Adjust based on progress */
+        animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+} 
