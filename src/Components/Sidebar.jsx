@@ -10,6 +10,7 @@ import Links from "./Links";
 
 function Sidebar() {
   const [open, setOpen] = useState(false);
+  
 
   let variants = {
     open: {
@@ -30,21 +31,19 @@ function Sidebar() {
     },
   };
   return (
-    <BrowserRouter>
+   
       <motion.div className="sidebar-main" animate={open ? "open" : "closed"}>
         <motion.div className="sidebar-bg" variants={variants}>
 
 
 
 
-          <Links />
-          <Routes>
-            <Route path="/home" element={<Home />} />
+          <Links onclick={()=>{setClosed(set)} }  />
+         
 
 
 
-          </Routes>
-
+          
 
 
 
@@ -53,7 +52,7 @@ function Sidebar() {
         <ToggleBtn setOpen={setOpen} />
 
       </motion.div>
-    </BrowserRouter>
+  
   );
 }
 

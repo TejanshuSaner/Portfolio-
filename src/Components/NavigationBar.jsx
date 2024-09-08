@@ -10,7 +10,7 @@ import Sidebar from "./Sidebar";
 function NavigationBar() {
   return (
     <div className="navBar">
-      <Sidebar/>
+      <Sidebar id="Sidebar" />
       {/* <NewSidebar/> */}
       <div className="wrapper">
         <motion.span

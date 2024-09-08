@@ -1,8 +1,16 @@
 import { color, motion } from "framer-motion";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 function Links() {
+
+
+  const handleLinkClick = ({ setOpen }) => {
+    setOpen(false);
+  };
+
+
+  
   const variants = {
     open: {
       Transition: {
@@ -26,43 +34,71 @@ function Links() {
       opacity: 0,
     },
   };
- 
+
 
   return (
     <motion.div className="links" variants={variants}>
-     <motion.a>
+      <motion.a>
 
-<Link to={'/home'}>Home</Link>
+        <Link to="home"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}  >Home
 
-     </motion.a>
-
-
-     <motion.a>
-
-About Us
-
-     </motion.a
-     
-     >
-     <motion.a>
-
-Skills
-
-     </motion.a>
+        </Link>
 
 
-     <motion.a>
+      </motion.a>
 
-Project
 
-     </motion.a>
+      <motion.a>
 
-     <motion.a>
+      <Link to="about"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}>About Us
 
-Contact us
+        </Link>
 
-     </motion.a>
-     
+      </motion.a>
+      <motion.a>
+      <Link to="skills1"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={20000}>Skill
+
+        </Link>
+
+      </motion.a>
+
+
+      <motion.a>
+
+      <Link to="skill1"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}>Project
+
+        </Link>
+
+      </motion.a>
+
+      <motion.a>
+
+      <Link to="contact"
+          spy={true}
+          smooth={true}
+          offset={50}
+          duration={500}>Contact
+
+        </Link>
+
+      </motion.a>
+
 
 
     </motion.div>

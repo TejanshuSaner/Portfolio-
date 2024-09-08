@@ -35,7 +35,7 @@ function App() {
         <ParallaxOne type="skills" />
       </section>
 
-      <section>
+      <section id="skills1">
         <Skills />
       </section>
       <Project />
